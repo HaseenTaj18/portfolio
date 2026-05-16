@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haseen Taj Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header">
+      <div class="container nav-container">
+        <h2 class="logo">Haseen Taj</h2>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero-ramya" aria-label="Intro">
+  <div class="hero-inner container">
+    <div class="hero-left">
+      <h1 class="hero-hi">Hi, I'm <span class="hero-name">Haseen Taj</span></h1>
+
+      <!-- Changing text block (fixed height avoids layout shift) -->
+      <h2 class="hero-role" aria-live="polite">
+        I am
+        <span class="changing-wrapper" aria-hidden="true">
+          <!-- JS will populate the changing words here as <span class="word ..."> -->
+          <span class="word word--visible">a Web Developer</span>
+        </span>
+      </h2>
+
+      <p class="hero-desc">
+        <p>
+    Passionate about building elegant, responsive web applications and clean user experiences. 
+    Skilled in JavaScript, React, Node.js, and Core Java, with hands-on experience in developing 
+    modern frontend and backend projects. 
+
+    Trained in Cyber Security and worked on multiple security-based projects including phishing 
+    email detection, breach analysis, suspicious URL scanning, and AI-powered cyber risk tools.
+</p>
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="#contact">Contact</a>
+       <a href="image/haseen.pdf" download class="resume-btn">Download Resume</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <!-- replace src with your profile image -->
+      <img src="image/haseen2.jpg" alt="Haseen Taj" class="hero-image" />
+    </div>
+  </div>
+</section>
+    <!-- ================= ABOUT SECTION ================= -->
+   <section id="about">
+  <div class="about-card hidden" id="aboutCard">
+    <h2 class="about-title">About <span class="accent">Me</span></h2>
+
+    <div class="about-lead">
+      <p>
+    I'm <strong>Haseen Taj</strong>, a passionate Full Stack Developer and Cyber Security enthusiast 
+    who enjoys building clean, responsive, and modern web applications. I focus on creating 
+    user-friendly digital experiences that combine elegant design with strong functionality 
+    and real-world problem solving.
+</p>
+
+<p>
+    I work with modern technologies like <strong>JavaScript, React, Node.js,</strong> and 
+    <strong>Core Java</strong>, and I continuously explore new tools and technologies to improve 
+    my development skills. Alongside web development, I have also trained in 
+    <strong>Cyber Security</strong> and built security-focused projects including phishing 
+    email detection, breach analysis, suspicious URL scanning, and AI-powered cyber tools.
+</p>
+
+<p>
+    I believe great products are built through creativity, consistency, and continuous learning. 
+    Whether it's frontend UI design, backend development, full-stack applications, or cyber 
+    security solutions, I’m committed to writing high-quality code and delivering polished, 
+    impactful projects that provide real value.
+</p>
+    </div>
+  </div>
+</section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section">
+      <div class="container">
+        <h1>Education</h1>
+
+        <div class="edu-card">
+          <h3>Bachelor of Technology</h3>
+          <p><strong>Ashoka Women's Engineering College,Jntua</strong></p>
+          <pre>2022 – 2026      CGPA=8.2</pre>
+        </div>
+
+        <div class="edu-card">
+          <h3>Pre-University</h3>
+          <p><strong>Sri Vivekananda Junior College,Jntua</strong></p>
+          <pre>MPC                 CGPA=5.5</pre>
+        </div>
+
+        <div class="edu-card">
+          <h3>Schooling</h3>
+          <p><strong>KCGH EM</strong></p>
+          <pre>2020                 CGPA=9.6</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="skills-section">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+        <!-- HTML -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>HTML</span>
+                <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 95%;"></div>
+            </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>CSS</span>
+                <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>JavaScript</span>
+                <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;"></div>
+            </div>
+        </div>
+
+        <!-- Java -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Java</span>
+                <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Python</span>
+                <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <!-- React -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>React</span>
+                <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <!-- Express.js -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Express.js</span>
+                <span class="skill-percent">65%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 65%;"></div>
+            </div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Node.js</span>
+                <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+        </div>
+        <!-- MongoDB -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>MongoDB</span>
+                <span class="skill-percent">70%</span>
+            </div>
+          
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Git & GitHub</span>
+                <span class="skill-percent">85%</span>
+            </div>
+          
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;"></div>
+            </div>
+        </div>
+
+        <!-- Cyber Security -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Cyber Security</span>
+                <span class="skill-percent">80%</span>
+            </div>
+          
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+        </div>
+
+        <!-- REST API -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>REST API</span>
+                <span class="skill-percent">75%</span>
+            </div>
+          
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>Machine Learning</span>
+                <span class="skill-percent">70%</span>
+            </div>
+          
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <!-- AI Tools -->
+        <div class="skill-card">
+            <div class="skill-header">
+                <span>AI Integration</span>
+                <span class="skill-percent">75%</span>
+            </div>
+          
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+    <!-- ================= CERTIFICATES ================= -->
+
+<section id="certifications" class="certifications-section">
+  <h2>Certifications</h2>
+  <div class="certifications-container">
+    <div class="cert-card">
+      <img src="image/cyber.jpg" alt="Certification 1">
+      <h3>Cyber Security</h3>
+      <p>Issued by Cognizant Foundation India</p>
+    </div>
+    <div class="cert-card">
+      <img src="image/gen ai.png" alt="Certification 1">
+      <h3>Gen AI</h3>
+      <p>Issued by SimpliLearn</p>
+    </div>
+    <div class="cert-card">
+      <img src="image/excelr.png" alt="Certification 1">
+      <h3>Full Stack Java</h3>
+      <p>Issued by Excelr Ed.tech</p>
+    </div>
+    <div class="cert-card">
+      <img src="image/deloitte.png" alt="Certification 3">
+      <h3>Job simulation(Coding) </h3>
+      <p>Issued by Deloitte</p>
+    </div>
+    <div class="cert-card">
+      <img src="image/master.png" alt="Certification 3">
+      <h3>Cyber security Awareness</h3>
+      <p>Issued by Master Card</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="image/elewayte.png" alt="Certification 2">
+      <h3>Core Java</h3>
+      <p>Issued by Elewayte</p>
+    </div>
+    <div class="cert-card">
+      <img src="image/nxtwave.png" alt="Certification 3">
+      <h3>Generative AI model</h3>
+      <p>Issued by Nxtwave</p>
+    </div>
+    
+  </div>
+</section>
+
+    <!-- ================= PROJECTS ================= -->
+<section id="projects" class="projects-section">
+
+    <div class="projects-header">
+        <h2>Projects</h2>
+        <p>Here are some of the cool things I’ve worked on.</p>
+    </div>
+
+    <div class="projects-grid">
+
+        <!-- Project 1 -->
+      <div class="project-card">
+              <img src="image/threat.png" class="project-img" alt="College Event Website">
+      
+      
+            <div class="project-info">
+                <h3>Phishing Email Detector</h3>
+            
+                <p>
+                    AI-powered phishing detection tool that scans suspicious emails and URLs for threats, fake domains, harmful links, and scam patterns in real time.
+                </p>
+              
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>AI</span>
+                </div>
+              
+                <div class="project-links">
+                    <a href="https://phising-email-detector.netlify.app/" class="project-btn live">
+                        Live
+                    </a>
+                  
+                    <a href="https://github.com/HaseenTaj18/phishing-email-detector" class="project-btn code">
+                        Code
+                    </a>
+                </div>
+            </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+          <img src="image/breach.png" class="project-img" alt="BreachShield AI">
+      
+          <div class="project-info">
+              <h3>BreachShield AI</h3>
+          
+              <p>
+                  AI-powered cybersecurity tool that detects breached emails, analyzes password strength, scans suspicious URLs, and generates real-time security risk reports.
+              </p>
+            
+              <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Python</span>
+                  <span>AI</span>
+              </div>
+            
+              <div class="project-links">
+                  <a href="https://breachshield-ai.netlify.app/" class="project-btn live">
+                      Live
+                  </a>
+                
+                  <a href="https://github.com/HaseenTaj18/breachshield-ai" class="project-btn code">
+                      Code
+                  </a>
+              </div>
+          </div>
+      </div>
+      <!-- Project 3 --> 
+      <div class="project-card">
+          <img src="image/event.png" class="project-img" alt="College Event Website">
+          <div class="project-info">
+              <h3>College Event Website</h3>
+              <p>
+                  A system that analyzes medical reports and provides meaningful health insights.
+              </p>
+              <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                  <a href="https://college-event-website.netlify.app/" class="project-btn live">Live</a>
+                  <a href="https://github.com/HaseenTaj18/avishkaar-project/tree/main/AAVISHKAR/AAVISHKAR%202K25%20Website/AAVISHKAR%202K25%20Website" class="project-btn code">Code</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+          <img src="image/bloodlink.png" class="project-img" alt="Portfolio Website">
+          <div class="project-info">
+              <h3>Bloodlink Website</h3>
+              <p>
+                  A modern, animated portfolio designed with smooth interactions and clean UI.
+              </p>
+              <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Javascript</span>
+                  <span>NodeJS</span>
+                  <span>ExpressJS</span>
+                  <span>Animations</span>
+              </div>
+              <div class="project-links">
+                  <a href="https://bloodlink-app.vercel.app/" class="project-btn live">Live</a>
+                  <a href="https://github.com/HaseenTaj18/bloodlink-app"class="project-btn code">Code</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+          <img src="image/trip.png" class="project-img" alt="AI Chat Tool">
+          <div class="project-info">
+              <h3>Trip Pilot</h3>
+              <p>
+                  Smart nudges, checklists and live updates to keep your trip on course.
+              </p>
+              <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                  <a href="https://trippilot.netlify.app/" class="project-btn live">Live</a>
+                  <a href="https://github.com/HaseenTaj18/Trip-pilot" class="project-btn code">Code</a>
+              </div>
+          </div>
+      </div>
+
+
+    </div>
+
+</section>
+
+    <!-- ================= HOBBIES ================= -->
+    <section id="hobbies" class="hobbies section">
+    <div class="container">
+
+        <h2 class="section-title">Hobbies & Interests</h2>
+        <p class="section-subtitle">Activities I enjoy during my free time.</p>
+
+        <div class="hobbies-grid">
+
+            <!-- Hobby Card 1 -->
+            <div class="hobby-card">
+                <img src="image/swim.png" alt="Swimming" class="hobby-img">
+                <h3 class="hobby-title">Swimming</h3>
+                <p class="hobby-description">Gliding through calm waters to refresh the mind and energize the body.</p>
+            </div>
+
+            <!-- Hobby Card 2 -->
+           <div class="hobby-card">
+                <img src="image/badminton.png" alt="Badminton" class="hobby-img">
+                <h3 class="hobby-title">Badminton</h3>
+                <p class="hobby-description">Chasing speed, precision, and fun through every swift rally.</p>
+            </div>
+
+            <!-- Hobby Card 3 -->
+            <div class="hobby-card">
+                <img src="image/movie.png" alt="Watching Sci-Fi Movies" class="hobby-img">
+                <h3 class="hobby-title">Watching Sci-Fi Movies</h3>
+                <p class="hobby-description">Diving into futuristic worlds that spark imagination and curiosity.</p>
+            </div>
+            
+
+        </div>
+
+    </div>
+</section>
+
+
+  <!-- ================= CONTACT SECTION (Improved, Ramya-inspired) ================= -->
+<section id="contact" class="contact" aria-labelledby="contact-heading">
+  <div class="contact-container container">
+
+    <!-- HEADLINE -->
+    <header class="contact-header">
+      <h2 id="contact-heading" class="section-title">Let's Work Together</h2>
+      <p class="section-subtitle">Have a project, an idea, or simply want to say hi? Send a message — I usually reply within a day.</p>
+    </header>
+
+    <!-- GRID: LEFT = CONTACT INFO / CARDS, RIGHT = FORM -->
+    <div class="contact-grid" role="region" aria-label="Contact section grid">
+
+      <!-- LEFT COLUMN: Contact Cards (email, phone, location) -->
+      <div class="contact-left" aria-hidden="false">
+
+        <!-- Primary contact cards -->
+        <ul class="contact-cards" role="list">
+          <li class="contact-card" role="listitem">
+            <h3 class="card-title">Email</h3>
+            <p class="card-body">
+              <a href="mailto:shaikhaseencareer@gmail.com" class="contact-link">shaikhaseencareer@gmail.com</a>
+            </p>
+          </li>
+
+          <li class="contact-card" role="listitem">
+            <h3 class="card-title">Phone</h3>
+            <p class="card-body">
+              <a href="tel:+919347970652" class="contact-link">+91 93479 70652</a>
+            </p>
+          </li>
+
+          <li class="contact-card" role="listitem">
+            <h3 class="card-title">Location</h3>
+            <p class="card-body">Kalyandurg, Anantapur, Andhra Pradesh, India</p>
+          </li>
+        </ul>
+
+        <!-- Optional short blurb / availability -->
+        <div class="contact-blurb">
+          <p>Open to internships, freelance, and full-time roles in web development and backend engineering. Let's discuss how we can collaborate.</p>
+        </div>
+
+        <!-- Social links (icons will be styled with CSS / include accessible labels) -->
+        <div class="contact-socials" aria-label="Social profiles">
+          <a href="https://www.linkedin.com/in/haseen-shaik-a98992343" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <!-- icon inserted with CSS or <svg> -->
+            LinkedIn
+          </a>
+          <a href="https://github.com/HaseenTaj18" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            GitHub
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            Instagram
+          </a>
+        </div>
+
+      </div><!-- /.contact-left -->
+
+
+      <!-- RIGHT COLUMN: Contact Form -->
+      <div class="contact-right" aria-hidden="false">
+
+        <!-- Use data-netlify="true" if you plan to use Netlify Forms; otherwise handle with JS/Backend -->
+        <form id="contactForm" class="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form">
+          <!-- Netlify hidden fields (if using Netlify) -->
+          <input type="hidden" name="form-name" value="contactForm">
+          <input type="hidden" name="bot-field">
+
+          <div class="form-row">
+            <label for="cf-name" class="sr-only">Your name</label>
+            <input id="cf-name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
+          </div>
+
+          <div class="form-row">
+            <label for="cf-email" class="sr-only">Email address</label>
+            <input id="cf-email" name="email" type="email" placeholder="Email address" required autocomplete="email" />
+          </div>
+
+          <div class="form-row">
+            <label for="cf-subject" class="sr-only">Subject</label>
+            <input id="cf-subject" name="subject" type="text" placeholder="Subject (optional)" />
+          </div>
+
+          <div class="form-row">
+            <label for="cf-message" class="sr-only">Message</label>
+            <textarea id="cf-message" name="message" rows="6" placeholder="Tell me about your project or question" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" aria-label="Send message">Send Message</button>
+
+            <!-- secondary quick links -->
+            <div class="quick-links">
+              <a href="image/haseen.pdf" download class="btn-secondary" aria-label="Download resume">Download Resume</a>
+              <a href="https://www.linkedin.com/in/haseen-shaik-a98992343" target="_blank" rel="noopener noreferrer" class="btn-outline" aria-label="Connect on LinkedIn">Connect</a>
+            </div>
+          </div>
+
+          <!-- status message (populated via JS after submit) -->
+          <div id="contactStatus" role="status" aria-live="polite" class="contact-status" hidden></div>
+        </form>
+
+      </div><!-- /.contact-right -->
+
+    </div><!-- /.contact-grid -->
+
+  </div><!-- /.contact-container -->
+</section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

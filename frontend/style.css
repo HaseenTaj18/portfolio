@@ -1,0 +1,1256 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f1eb;
+  color: #222;
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f9f1eb;
+  backdrop-filter: blur(8px);
+  padding: 18px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #0077ff;
+}
+/* =============== HERO SECTION =============== */
+/* FIX hero overlapping navbar */
+.hero-ramya {
+  padding-top: 120px; /* increase if your navbar is taller */
+  padding-bottom: 60px;
+  background: #f9f1eb;
+  color: #222;
+}
+
+/* Layout */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: center;
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 980px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-right {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+/* Texts */
+.hero-hi {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.hero-name {
+  color: #008d7f;
+}
+
+.hero-role {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 6px 0 18px;
+  height: 44px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.changing-wrapper {
+  position: relative;
+  height: 44px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Word transitions */
+.word {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.word--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.word--out {
+  opacity: 0;
+  transform: translateY(-14px);
+}
+
+/* Description */
+.hero-desc {
+  color: #555;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+}
+.resume-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #f4a100; /* your orange button color */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #d98c00;
+  transform: translateY(-2px);
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #b366ff, #7a4fff);
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid #7a4fff;
+  color: #7a4fff;
+}
+
+/* Image */
+.hero-image {
+  width: 80%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 110px 0 70px;
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* ================= ABOUT SECTION ================= */
+:root {
+  --bg: #faf7f0; /* Soft elegant background */
+  --content-bg: #ffffff;
+  --accent: #21a092; /* Teal color for "Me" */
+  --muted: #6b7280;
+  --maxw: 900px;
+  --radius: 10px;
+}
+
+/* Section layout */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* adjust for your navbar height */
+  padding: 80px 20px;
+  background: var(--bg);
+  box-sizing: border-box;
+}
+
+.about-card {
+  width: 100%;
+  max-width: var(--maxw);
+  background: var(--content-bg);
+  padding: 50px 60px;
+  border-radius: var(--radius);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-out;
+}
+
+/* Initial hidden state */
+.about-card.hidden {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+/* Title */
+.about-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #111827;
+}
+
+.about-title .accent {
+  color: var(--accent);
+}
+
+/* Paragraphs */
+.about-lead {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.about-lead p + p {
+  margin-top: 18px;
+}
+
+.about-lead strong {
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 35px 25px;
+  }
+  .about-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 25px 18px;
+  }
+  .about-title {
+    font-size: 28px;
+  }
+}
+
+/* ================= CARD GRID (Ramya Style) ================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #444;
+}
+
+/* ================= EDUCATION CARD ================= */
+
+.edu-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.edu-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+/* ----------------------------- */
+/*        SKILLS SECTION         */
+/* ----------------------------- */
+
+.skills-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.skills-section .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Container */
+.skills-container {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Each Skill Card */
+.skill-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  border: 1px solid #e6e6e6;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Header (Skill Name + Percentage) */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+  font-size: 17px;
+}
+
+/* Progress Bar Container */
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: #e8e8e8;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Bar Fill */
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #6c63ff, #7e74ff);
+  border-radius: 50px;
+  width: 0%;
+  transition: width 1.2s ease-in-out;
+}
+
+/* Animation trigger */
+.skill-card.visible .skill-level {
+  width: var(--skill-level);
+}
+
+/* Tablet & Mobile Adjustments */
+@media (max-width: 768px) {
+  .skills-container {
+    width: 95%;
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 18px 20px;
+  }
+}
+/* Certifications Section */
+.certifications-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.certifications-section h2 {
+  font-size: 2.5rem;
+  color: #008080;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.cert-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.cert-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.cert-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   PROJECT SECTION – RAMYA STYLE
+   =========================== */
+
+.projects-section {
+  padding: 80px 10%;
+  background: #fdfdfd;
+  font-family: "Poppins", sans-serif;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+}
+
+.projects-header p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* GRID EXACT LIKE RAMYA */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover animation */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* PROJECT IMAGE */
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* PROJECT INFO */
+.project-info {
+  padding: 25px;
+}
+
+.project-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.project-info p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* TAGS */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.project-tags span {
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #eef3ff;
+  color: #4169e1;
+  border-radius: 6px;
+}
+
+/* BUTTONS */
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.project-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* LIVE DEMO BUTTON */
+.project-btn.live {
+  background: #4169e1;
+  color: white;
+}
+
+.project-btn.live:hover {
+  background: #2f54c6;
+}
+
+/* SOURCE CODE BUTTON */
+.project-btn.code {
+  background: transparent;
+  border: 2px solid #4169e1;
+  color: #4169e1;
+}
+
+.project-btn.code:hover {
+  background: #4169e1;
+  color: white;
+}
+
+/* =========================
+   HOBBIES SECTION
+   ========================= */
+
+.hobbies {
+  padding: 80px 0;
+  background: #faf8f6; /* Same background tone as Ramya */
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #009688;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+}
+
+/* --- GRID LAYOUT --- */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .hobbies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- CARD STYLING --- */
+.hobby-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* --- IMAGE STYLING (Ramya style) --- */
+.hobby-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+/* --- TEXT --- */
+.hobby-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  color: #1a1a1a;
+}
+
+.hobby-description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+/* Hidden state before scrolling into view */
+.hide-hobby {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+/* Visible state after animation triggers */
+.show-hobby {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----------------------- */
+/* CONTACT SECTION STYLING */
+/* ----------------------- */
+/* =========================
+   RESET + BASE VARIABLES
+   ========================= */
+:root {
+  --primary: #009688; /* Teal-like highlight (Ramya-style) */
+  --primary-light: #dff5f2;
+  --accent: #f9a825; /* Yellow accent for buttons */
+  --text-dark: #1a1a1a;
+  --text-light: #666;
+  --bg-light: #faf8f6;
+  --white: #fff;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --transition: 0.3s ease;
+}
+
+/* Small screen container width */
+.container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+/* =========================
+   CONTACT SECTION BASE
+   ========================= */
+.contact {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-light);
+  max-width: 600px;
+}
+
+/* =========================
+   GRID STRUCTURE
+   ========================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   LEFT SIDE – CONTACT CARDS
+   ========================= */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.contact-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.card-body {
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.contact-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-blurb {
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+/* SOCIAL LINKS */
+.contact-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.social-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   RIGHT SIDE – CONTACT FORM
+   ========================= */
+.contact-form {
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition);
+}
+
+.contact-form:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: #d48f1f;
+}
+
+.btn-secondary,
+.btn-outline {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+/* Resume download button */
+.btn-secondary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #00796b;
+}
+
+/* Outline button */
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Quick links container */
+.quick-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* =========================
+   STATUS MESSAGE
+   ========================= */
+.contact-status {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--primary);
+  display: none;
+}
+
+/* Show it when JS removes "hidden" */
+.contact-status.show {
+  display: block;
+}
+
+/* =========================
+   ACCESSIBLE LABEL CLASS
+   ========================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .navbar ul {
+    display: none; /* Optional – I can add mobile menu if needed */
+  }
+}
+
+
+   /* ===============================
+   MOBILE RESPONSIVENESS FIX
+================================ */
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* ================= HEADER ================= */
+
+  .header {
+    padding: 14px 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .navbar ul li a {
+    font-size: 13px;
+  }
+
+  /* ================= GLOBAL SECTION FIX ================= */
+
+  section {
+    min-height: auto !important;
+    height: auto !important;
+
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+
+    margin: 0 !important;
+  }
+
+  .container,
+  .hero-inner,
+  .skills-container,
+  .projects-grid,
+  .contact-container {
+    width: 100%;
+  }
+
+  /* ================= HERO SECTION ================= */
+
+  .hero-ramya {
+    padding-top: 40px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 260px !important;
+    height: auto;
+  }
+
+  .hero-hi {
+    font-size: 38px !important;
+    line-height: 1.3;
+  }
+
+  .hero-role {
+    font-size: 26px !important;
+    margin-top: 10px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  /* ================= ABOUT ================= */
+
+  #about {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .about-card {
+    padding: 30px 22px !important;
+    margin: 0 !important;
+  }
+
+  .about-title {
+    font-size: 40px !important;
+  }
+
+  .about-lead p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  /* ================= EDUCATION ================= */
+
+  #education {
+    padding-top: 50px !important;
+  }
+
+  .edu-card {
+    padding: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .edu-card pre {
+    white-space: pre-wrap;
+    line-height: 1.8;
+  }
+
+  /* ================= SKILLS ================= */
+
+  .skills-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  /* ================= CERTIFICATIONS ================= */
+
+  .certifications-container {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  .cert-card img {
+    height: auto;
+  }
+
+  /* ================= PROJECTS ================= */
+
+  .projects-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
+  }
+
+  .project-card {
+    margin: 0 auto;
+  }
+
+  .project-img {
+    height: auto;
+  }
+
+  /* ================= HOBBIES ================= */
+
+  .hobbies-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  /* ================= CONTACT ================= */
+
+  .contact {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  .contact-card {
+    padding: 24px !important;
+  }
+
+  .contact-right {
+    padding: 25px !important;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-secondary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ================= REMOVE HUGE EMPTY GAPS ================= */
+
+  .hero-ramya,
+  #about,
+  #education,
+  #skills,
+  #certifications,
+  #projects,
+  #hobbies,
+  #contact {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
